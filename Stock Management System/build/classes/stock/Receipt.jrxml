@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="226" pageHeight="425" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7800aae-9963-4641-bb47-5a4f7bc5f9a0">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="288"/>
+	<parameter name="invo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+sales_product.id AS sales_product_id,
+sales_product.sales_id AS sales_product_sales_id,
+sales_product.pid AS sales_product_pid,
+sales_product.price AS sales_product_price,
+sales_product.qty AS sales_product_qty,
+sales_product.total AS sales_product_total,
+sales.id AS sales_id,
+sales.date AS sales_date,
+sales.subtotal AS sales_subtotal,
+sales.pay AS sales_pay,
+sales.bal AS sales_bal
+
+FROM
+ sales_product Inner Join sales ON 
+sales_product.`sales_id`=sales.`id` where sales.`id` = $P{invo}  ;]]>
+	</queryString>
+	<field name="sales_product_id" class="java.lang.Integer"/>
+	<field name="sales_product_sales_id" class="java.lang.Integer"/>
+	<field name="sales_product_pid" class="java.lang.Integer"/>
+	<field name="sales_product_price" class="java.lang.Integer"/>
+	<field name="sales_product_qty" class="java.lang.Integer"/>
+	<field name="sales_product_total" class="java.lang.Integer"/>
+	<field name="sales_id" class="java.lang.Integer"/>
+	<field name="sales_date" class="java.sql.Date"/>
+	<field name="sales_subtotal" class="java.lang.Integer"/>
+	<field name="sales_pay" class="java.lang.Integer"/>
+	<field name="sales_bal" class="java.lang.Integer"/>
+	<group name="Sales">
+		<groupFooter>
+			<band height="70">
+				<staticText>
+					<reportElement x="87" y="23" width="35" height="12" uuid="86f605c5-acc6-40d1-9e07-454dd1f2f8c4"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Pay : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="86" y="4" width="35" height="12" uuid="02b58551-092d-429e-bd51-b18c5ce338d2"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="87" y="44" width="42" height="12" uuid="1b6f3df0-9fef-446a-984e-16e4cf896f37"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Balance : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="4" width="18" height="12" uuid="b34a7277-1e42-4b71-a3c6-0938eda86509"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rs.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="23" width="18" height="12" uuid="b741b51e-e8d8-4c49-a47e-c2b276be78e2"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rs.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="44" width="18" height="12" uuid="d66d5e07-edc3-43d7-966e-b4a220c09ec2"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rs.]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="158" y="3" width="28" height="13" uuid="057ad842-7a80-41f7-b17d-883a84b5ac97"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sales_subtotal}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="158" y="23" width="28" height="21" uuid="e4d88491-f76c-4372-8053-7b96b332c309"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sales_pay}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="159" y="44" width="27" height="22" uuid="06d22f0b-6a58-445d-8b47-a2ab58be5e89"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sales_bal}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="0" width="112" height="17" uuid="21146556-803f-4e3a-a3cb-e63a744d08a0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[SALES RECEIPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="57" height="14" uuid="2eb69f65-9704-4b4c-86dd-24d9af940f54"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice No. : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="31" width="16" height="14" uuid="9624baa9-fb4f-47cd-86f1-ac6f1e853ee1"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="31" width="47" height="14" uuid="4c73f732-0d79-4fd7-86fe-e74afdeabc1f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="0" width="25" height="14" uuid="5de9c88c-dac8-47af-b0b1-3113ca4ddc79"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="52" height="14" uuid="f54e8bf0-fde3-48cf-a648-2a0a2025fd56"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Id ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="0" width="25" height="14" uuid="4c856d6a-7e25-46fd-8258-f3473c803680"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="0" width="47" height="14" uuid="42b33d61-bfc8-4185-bd3d-7204eab6cc96"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="17" height="15" uuid="dfba24bf-54bd-4629-8f49-4e3cf805b5b5"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_product_pid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="0" width="14" height="15" uuid="1d2461cf-715a-40d2-bcf8-663233b71ff2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_product_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="0" width="12" height="15" uuid="6dd3a14e-574d-4707-9e7e-8ca7325d26ea"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_product_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="17" height="15" uuid="15d10e2d-e301-48d0-874b-21c616ef065a"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_product_total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="25" width="186" height="1" uuid="ef2d7d41-0e26-44de-8d0f-5dbf81fd0a6e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="24" y="18" width="145" height="20" uuid="482be238-42c7-4e9b-b171-9f03265dfb4b"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You! Shop with us again!]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
