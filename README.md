@@ -1,8 +1,8 @@
 # Electrical-Stock-Management-System
-## ABSTRACT : 
+## ➢ ABSTRACT : 
 Electrical Stock Management System is an application developed by using Java programming language. The main objective of this project is to manage stocks for an electrical company or organization, and take care of sales and purchases of electrical products. This project includes various modules and features like add, edit, view and delete electrical stock management related things in the system database.
 
-## SOFTWARE REQUIREMENTS :
+## ➢ SOFTWARE REQUIREMENTS :
 Operating System : Any version of Windows NT family (4.0 &above)
 
 Server: Xampp
@@ -15,10 +15,10 @@ Database Connectivity: JDBC.
 
 For Jasper Reports: iReport Library, commons-collections-3.2.1-1.0.0.jar, commons-digester-2.1.jar, commons-logging-1.2.1.1.jar & commons- validator-1.4.0.jar
 
-## FLOWCHART : 
+## ➢ FLOWCHART : 
 ![flowchart](https://user-images.githubusercontent.com/72904996/121799422-a5b95e80-cc49-11eb-9fcf-311008ca1d81.PNG)
 
-## SCRENSHOTS : 
+## ➢ SCRENSHOTS : 
 
 ### 1. LOGIN PAGE
 ![Login](https://user-images.githubusercontent.com/72904996/121799311-04320d00-cc49-11eb-9713-b5fcde12ccb6.JPG)
