@@ -3,18 +3,32 @@
 Electrical Stock Management System is an application developed by using Java programming language. The main objective of this project is to manage stocks for an electrical company or organization, and take care of sales and purchases of electrical products. This project includes various modules and features like add, edit, view and delete electrical stock management related things in the system database.
 
 ## ➢ SOFTWARE REQUIREMENTS :
-Operating System : Any version of Windows NT family (4.0 &above)
+<ul type="arrow">
+  <li> <b> Operating System : </b> Any version of Windows NT family (4.0 &above) </li>
+   &emsp;
+  <li> <b> Server : </b>
+       <p align="left"> 
+            <img src="https://icons.iconarchive.com/icons/mybaco/baco-flurry/512/XAMPP-icon.png" width="40" height="40"/> 
+          </a>    
+         &emsp;
+ <li> <b> Backend : </b>
+    <p align="left"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="css3" width="40" height="40"/> 
+          </a> 
+         &emsp;
 
-Server: Xampp
+  <li> <b> Database : </b>
+     <p align="left"> 
+       <a href="https://www.mysql.com/" target="_blank">
+         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> 
+       </a> 
 
-Language: Java
-
-Database: MySQL
-
-Database Connectivity: JDBC.
-
-For Jasper Reports: iReport Library, commons-collections-3.2.1-1.0.0.jar, commons-digester-2.1.jar, commons-logging-1.2.1.1.jar & commons- validator-1.4.0.jar
-
+ <li> <b> Database Connectivity : JDBC </b>
+    <br>
+<li> <b> For Jasper Reports : iReport Library, commons-collections-3.2.1-1.0.0.jar, commons-digester-2.1.jar, commons-logging-1.2.1.1.jar & commons- validator-1.4.0.jar</b>
+</li>
+  </ul>
+  
 ## ➢ FLOWCHART : 
 ![flowchart](https://user-images.githubusercontent.com/72904996/121799422-a5b95e80-cc49-11eb-9fcf-311008ca1d81.PNG)
 
